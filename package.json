@@ -1,0 +1,31 @@
+{
+  "name": "my-note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "watchify app/appEntry.js -t babelify -o public/js/bundle.js --debug --verbose",
+    "package": "electron-packager ./ my-note --overwrite --app-version=1.0.0 --platform=win32 --arch=all --out=../my-note --version=1.2.1 --icon=./public/img/app-icon.icns"
+  },
+  "author": "CJH",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "electron-packager": "^8.7.2",
+    "electron-prebuilt": "^1.4.13",
+    "electron-reload": "^1.2.1",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "antd": "^2.12.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
